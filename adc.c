@@ -1,11 +1,11 @@
 #include "adc.h"
 #include "Config.h"
 
-/*Recebe o canal ao qual deve ser feita a conversão adc e retorna o valor convertido*/
-unsigned int converte_adc (unsigned char Canal)
+/*Recebe o canal ao qual deve ser feita a conversï¿½o adc e retorna o valor convertido*/
+uint16_t converte_adc (uint8_t Canal)
 {
 
-    unsigned int Resultado;
+    uint16_t Resultado;
 
     ADCON0bits.CHS2 = (Canal >> 2) & 0x01;
     ADCON0bits.CHS1 = (Canal >> 1) & 0x01;
